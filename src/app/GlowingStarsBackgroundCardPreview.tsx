@@ -23,72 +23,72 @@ export function HeroParallaxDemo() {
 export const products = [
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid1,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid2,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid3,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid4,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid5,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid6,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid7,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid8,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid10,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid11,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid12,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid13,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid14,
   },
   {
     title: "vidos",
-    link: "https://gomoonbeam.com",
+    link: "#",
     videosrc: vid15,
   },
 ];

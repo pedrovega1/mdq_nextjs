@@ -3,14 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
+import Navbar from "@/components/ui/navbar";
 
 import { NavigationMenuDemo } from "./navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aceternity",
-  description: "Example of using the Aceternity UI components",
+  title: "MDQ",
+  description: "",
 };
 
 export default function RootLayout({
@@ -22,10 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <header>
+          {" "}
+          {/* <Navbar /> */}
           <NavigationMenuDemo />
         </header>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ThemeSwitcher />
           <main>{children}</main>
         </ThemeProvider>
       </body>
