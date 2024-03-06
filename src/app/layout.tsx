@@ -3,15 +3,23 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
-import Navbar from "@/components/ui/navbar";
 
 import { NavigationMenuDemo } from "./navigation";
+import Navigationbar from "@/components/ui/navbar";
+import { FooterLinks } from "@/components/Footer/FooterLinks";
+import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { theme } from "@/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MDQ",
   description: "",
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +33,12 @@ export default function RootLayout({
         <header>
           {" "}
           {/* <Navbar /> */}
-          <NavigationMenuDemo />
+          {/* <NavigationMenuDemo /> */}
+          {/* <NavBar /> */}
+          <Navigationbar />
         </header>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main>{children}</main>
-        </ThemeProvider>
+        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <FooterLinks />
       </body>
     </html>
   );
