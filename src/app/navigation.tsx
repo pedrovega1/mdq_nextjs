@@ -65,7 +65,7 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
 
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/granty" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Гранты
             </NavigationMenuLink>
@@ -85,17 +85,22 @@ export function NavigationMenuDemo() {
               FAQ
             </NavigationMenuLink>
           </Link>
+          <Link href="/aboutus" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              О нас
+            </NavigationMenuLink>
+          </Link>
           <Link href="/contacts" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Контакты
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <ThemeSwitcher />
           </ThemeProvider>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
