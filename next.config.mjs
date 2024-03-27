@@ -17,6 +17,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
         port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatar.vercel.sh',
+        port: '',
       }
     ]
   }

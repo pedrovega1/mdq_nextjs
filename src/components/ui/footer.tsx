@@ -29,7 +29,7 @@ function Footer() {
 					<ul>
                     <a href="granty"><p className="text-gray-800 font-bold text-xl pb-4 hover:text-blue-600 cursor-pointer">Гранты</p></a>
 						<li className="text-gray-800 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                            <a href="">
+                            <a href="http://localhost:3001/">
 							Новости
                             </a>
 						</li>

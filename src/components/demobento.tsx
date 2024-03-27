@@ -300,57 +300,57 @@ const SkeletonFive = () => {
 const items = [
   {
     title: (
-        <a className="text-sm bold" href="https://www.google.com/forms/about/">
+        <a className="text-sm bold" href="/granty/journalists">
        Гранты для журналистов
         </a>
       ),
     description: (
-        <a className="text-sm bold" href="https://www.google.com/forms/about/">
+        <a className="text-sm bold" href="/granty/journalists">
            Гранты на образование объективной журналистике до 5 млн тг.
         </a>
       ),
     header: <SkeletonOne />,
-    className: "md:col-span-1",
+    className: "md:col-span-3",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />
    
   },
   {
     title: (
-        <a className="text-sm bold" href="https://www.google.com/forms/about/">
+        <a className="text-sm bold" href="/granty/videographs">
        Гранты для видеографов
         </a>
       ),
     description: (
-        <a className="text-sm bold" href="https://www.google.com/forms/about/">
+        <a className="text-sm bold" href="/granty/videographs">
        Гранты на реализацию социально-значимых проектов до 10 млн тг.
         </a>
     ),
     header: <SkeletonTwo />,
-    className: "md:col-span-1",
+    className: "md:col-span-3",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
-  {
-    title: "Условия и юридические документы",
-    description: (
-      <span className="text-sm">
+  // {
+  //   title: "Условия и юридические документы",
+  //   description: (
+  //     <span className="text-sm">
         
-      </span>
-    ),
-    header: <SkeletonThree />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Фидбэк от наших стипендиантов!",
-    description: (
-      <span className="text-sm">
-        Оставьте ответ здесь
-      </span>
-    ),
-    header: <SkeletonFour />,
-    className: "md:col-span-3",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
+  //     </span>
+  //   ),
+  //   header: <SkeletonThree />,
+  //   className: "md:col-span-1",
+  //   icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  // },
+  // {
+  //   title: "Фидбэк от наших стипендиантов!",
+  //   description: (
+  //     <span className="text-sm">
+  //       Оставьте ответ здесь
+  //     </span>
+  //   ),
+  //   header: <SkeletonFour />,
+  //   className: "md:col-span-2",
+  //   icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  // },
 
 //   {
 //     title: "Text Summarization",
