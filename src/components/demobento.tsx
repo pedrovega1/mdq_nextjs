@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export function BentoGridThirdDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] my-20">
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] my-20 md:px-0 px-4">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -41,7 +41,7 @@ const SkeletonOne = () => {
       x: 10,
       rotate: 5,
       transition: {
-        duration: 0.,
+        duration: 0.5,
       },
     },
   };

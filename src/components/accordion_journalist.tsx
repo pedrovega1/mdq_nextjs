@@ -7,7 +7,7 @@ import {
   
   export function Accordionjournal() {
     return (
-      <Accordion type="single" collapsible className="w-full p-20 py-10">
+      <Accordion type="single" collapsible className="w-full p-4 ">
         <AccordionItem value="item-1">
           <AccordionTrigger>А сколько денег?</AccordionTrigger>
           <AccordionContent>

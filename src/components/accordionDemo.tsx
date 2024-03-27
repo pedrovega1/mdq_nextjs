@@ -7,7 +7,7 @@ import {
   
   export function AccordionDemo() {
     return (
-      <Accordion type="single" collapsible className="w-full p-20 py-48">
+      <Accordion type="single" collapsible className="w-full p-20 md:py-48">
         <AccordionItem value="item-1">
           <AccordionTrigger>Часто задаваемые вопросы?</AccordionTrigger>
           <AccordionContent>
