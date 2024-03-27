@@ -1,81 +1,107 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+import { Fragment, useState } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { ThemeProvider } from "next-themes";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
-function NavBar() {
+function Navigationbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div>
-      <nav className="w-full  fixed top-0 left-0 right-0 z-10">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              {/* LOGO */}
-              <Link href="/">
-                <Image src="/logo.svg" width={70} height={70} alt="logo" />
-                <h2 className="text-2xl text-cyan-600 font-bold "></h2>
-              </Link>
-              {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
-                <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <Image src="/close.svg" width={30} height={30} alt="logo" />
-                  ) : (
-                    <Image
-                      src="/hamburger.svg"
-                      width={30}
-                      height={30}
-                      alt="logo"
-                      className="focus:border-none active:border-none"
-                    />
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? "p-12 md:p-0 block" : "hidden"
-              }`}
-            >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-l text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-blue-900  border-black-900  md:hover:text-neutral-300 md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    О фонде
-                  </Link>
-                </li>
-                <li className="pb-6 text-l text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-black-600  border-purple-900  md:hover:text-neutral-300 md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                    Гранты
-                  </Link>
-                </li>
-                <li className="pb-6 text-l text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-black-600  border-purple-900  md:hover:text-neutral-300 md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                    Образование
-                  </Link>
-                </li>
-                <li className="pb-6 text-l text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-black-600  border-purple-900  md:hover:text-neutral-300 md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    Аналитика
-                  </Link>
-                </li>
-                <li className="pb-6 text-l text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-black-600  border-purple-900  md:hover:text-neutral-300 md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    Новости
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <Popover
+      className={"container mx-auto flex items-center border-b2 px-6 py-3 h-24"}
+    >
+      <Link href="/">
+        <Image src="/logo.svg" width={70} height={70} alt="logo" />
+      </Link>
+
+      <div className="grow">
+        <div className="hidden sm:flex items-center justify-center gap-2 md:gap-8">
+          <Link href="/">О фонде</Link>
+          <Link href="/">Гранты</Link>
+          <Link href="/">Образование</Link>
+          <Link href="/">Аналитика</Link>
+          <Link href="/">Новости</Link>
         </div>
-      </nav>
-    </div>
+        <div className="flex grow items-center justify-end sm:hidden">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-gray-500 focus:outline-none focus:ring-inset focus:ring-indigo-500">
+            <span className="sr-only">Menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </Popover.Button>
+          <Popover.Overlay className="sm:hidden fixed inset-0 bg-white opacity-30" />
+          <Transition
+            as={Fragment}
+            enter="duration-100 ease-out"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="duration-100 ease-in"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-o scale-95"
+          >
+            <Popover.Panel
+              focus
+              className="absolute inset-x-0 top-0 origin-top-right h-full transform p-2 transition md:hidden"
+            >
+              <div className="h-full rounded-lg bg-black ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
+                <div className="px-5 pt-5 pb-6">
+                  <div className="flex items-center justify-between">
+                    <Link href="/">
+                      <Image
+                        src="/logo.svg"
+                        width={70}
+                        height={70}
+                        alt="logo"
+                      />
+                    </Link>
+                    <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-gray-500 focus:outline-none focus:ring-inset focus:ring-indigo-500">
+                      <span className="sr-only">Close</span>
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    </Popover.Button>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <nav className="grid gap-y-8">
+                    <Link
+                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
+                      href="/"
+                    >
+                      О фонде
+                    </Link>
+                    <Link
+                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
+                      href="/"
+                    >
+                      Гранты
+                    </Link>
+                    <Link
+                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
+                      href="/"
+                    >
+                      Образование
+                    </Link>
+                    <Link
+                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
+                      href="/"
+                    >
+                      Аналитика
+                    </Link>
+                    <Link
+                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
+                      href="/"
+                    >
+                      Новости
+                    </Link>
+                  </nav>
+                </div>
+              </div>
+            </Popover.Panel>
+          </Transition>
+        </div>
+      </div>
+    </Popover>
   );
 }
 
-export default NavBar;
+export default Navigationbar;
