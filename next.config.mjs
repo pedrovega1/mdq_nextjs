@@ -11,12 +11,23 @@ const nextConfig = {
         port: "",
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        port: "",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
       },
-    ],
-  },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatar.vercel.sh',
+        port: '',
+      }
+    ]
+  }
+
 };
 
 export default withNextVideo(nextConfig);
