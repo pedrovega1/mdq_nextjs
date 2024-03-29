@@ -1,20 +1,19 @@
 "use client";
-
+import { useState } from "react";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import i18next from "../../i18n";
 import Image from "next/image";
 
 const navigation = [
-  // { name: 'MDQ', href: '/' },
-  { name: "Гранты", href: "/granty" },
-  { name: "Аналитика", href: "/analytics" },
-  { name: "Конкурсы", href: "/konkursy" },
-  { name: "FAQ", href: "/faq" },
-  { name: "О нас", href: "/aboutus" },
-  { name: "Контакты", href: "/contacts" },
+  { name: i18next.t("about"), href: "/aboutus" },
+  { name: i18next.t("grants"), href: "/granty" },
+  { name: i18next.t("analytics"), href: "/analytics" },
+  { name: i18next.t("contests"), href: "/konkursy" },
+  { name: i18next.t("faq"), href: "/faq" },
+  { name: i18next.t("contacts"), href: "/contacts" },
 ];
 
 function classNames(...classes: string[]) {
@@ -23,11 +22,39 @@ function classNames(...classes: string[]) {
 
 export default function Navbar({ user }: { user: any }) {
   const pathname = usePathname();
+  const [currentLang, setCurrentLang] = useState(i18next.language);
+
+  const handleChangeLanguage = (lang: string) => {
+    i18next.changeLanguage(lang);
+    setCurrentLang(lang);
+  };
 
   return (
     <Disclosure as="nav" className="bg-current shadow-sm">
       {({ open }) => (
         <>
+
+
+
+        {/* I18N */}
+          <div className="flex gap-8">
+            <button
+              className="text-black"
+              onClick={() => handleChangeLanguage("en")}
+              disabled={currentLang === "en"}
+            >
+              English
+            </button>
+            <button
+              className="text-black"
+              onClick={() => handleChangeLanguage("ru")}
+              disabled={currentLang === "ru"}
+            >
+              Русский
+            </button>
+          </div>
+
+          
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex">
@@ -128,8 +155,8 @@ export default function Navbar({ user }: { user: any }) {
                   )}
                   aria-current={pathname === item.href ? "page" : undefined}
                 >
-                  {item.name}
-                </Disclosure.Button>
+                  {i18next.t(item.name)}
+                </Disclosure.Button>  
               ))}
             </div>
           </Disclosure.Panel>

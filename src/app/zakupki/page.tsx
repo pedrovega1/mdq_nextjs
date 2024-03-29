@@ -222,7 +222,7 @@ export default function Zakup() {
           <h2 className="text-gray-200 font-semibold md:text-4xl text-2xl mb-2">
             Закупки 2024 года
           </h2>
-          <div className="flex flex-col mb-2">
+          <div className="md:flex md:flex-row md:justify-between flex-col mb-2">
             <div className="mb-2">
               <h3 className="text-gray-300 font-medium mb-2">
                 Информационные сообщения:
@@ -258,7 +258,7 @@ export default function Zakup() {
           <h2 className="text-gray-200 font-semibold md:text-4xl text-2xl mb-2">
             Закупки 2023 года
           </h2>
-          <div className="flex flex-col mb-2">
+          <div className="md:flex md:flex-row md:justify-between mb-2">
             <div className="mb-2">
               <h3 className="text-gray-300 font-medium mb-2">
                 Информационные сообщения:
