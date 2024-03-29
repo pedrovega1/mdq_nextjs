@@ -1,5 +1,6 @@
 "use client";
 
+
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -138,3 +139,4 @@ export default function Navbar({ user }: { user: any }) {
     </Disclosure>
   );
 }
+

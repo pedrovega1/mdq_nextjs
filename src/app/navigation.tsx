@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import {
@@ -15,6 +16,7 @@ import {
 } from "@/components/ui/react-navigation-menu";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 import { ThemeProvider } from "next-themes";
+import { useState } from "react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -55,36 +57,82 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavigationMenuDemo() {
+  const [navbar, setNavbar] = useState(false);
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+    <NavigationMenu
+      className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+        navbar ? "p-12 md:p-0 block" : "hidden"
+      }`}
+    >
+      <div className="md:hidden">
+        <button
+          className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+          onClick={() => setNavbar(!navbar)}
+        >
+          {navbar ? (
+            <Image src="/close.svg" width={30} height={30} alt="logo" />
+          ) : (
+            <Image
+              src="/hamburger.svg"
+              width={30}
+              height={30}
+              alt="logo"
+              className="focus:border-none active:border-none"
+            />
+          )}
+        </button>
+      </div>
+      <NavigationMenuList className="w-full  fixed top-0 left-0 right-0 z-10">
+        <NavigationMenuItem className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <Link
+            href="/"
+            legacyBehavior
+            passHref
+            onClick={() => setNavbar(!navbar)}
+          >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               MDQ
             </NavigationMenuLink>
           </Link>
 
+
           <Link href="/granty" legacyBehavior passHref>
+
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Гранты
             </NavigationMenuLink>
           </Link>
-          <Link href="/analytics" legacyBehavior passHref>
+          <Link
+            href="/analytics"
+            legacyBehavior
+            passHref
+            onClick={() => setNavbar(!navbar)}
+          >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Аналитика
             </NavigationMenuLink>
           </Link>
-          <Link href="/konkursy" legacyBehavior passHref>
+          <Link
+            href="/konkursy"
+            legacyBehavior
+            passHref
+            onClick={() => setNavbar(!navbar)}
+          >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Конкурсы
             </NavigationMenuLink>
           </Link>
-          <Link href="/faq" legacyBehavior passHref>
+          <Link
+            href="/faq"
+            legacyBehavior
+            passHref
+            onClick={() => setNavbar(!navbar)}
+          >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               FAQ
             </NavigationMenuLink>
           </Link>
+
           <Link href="/aboutus" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               О нас
@@ -95,6 +143,7 @@ export function NavigationMenuDemo() {
               Контакты
             </NavigationMenuLink>
           </Link>
+
         </NavigationMenuItem>
         {/* <NavigationMenuItem>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
