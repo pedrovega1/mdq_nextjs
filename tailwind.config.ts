@@ -102,6 +102,8 @@ module.exports = {
     extend: {
       animation: {
         aurora: "aurora 60s linear infinite",
+        "shimmer": "shimmer 4s linear infinite", 
+
       },
       keyframes: {
         aurora: {
@@ -112,7 +114,16 @@ module.exports = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
       },
+      
     },
   },
   plugins: [addVariablesForColors],

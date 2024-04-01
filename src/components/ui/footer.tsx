@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -52,6 +53,9 @@ function Footer() {
             <li className="text-gray-800 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
               <a href="contacts">Контакты</a>
             </li>
+            <li className="text-gray-800 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <a href="konkursy">Конкурсы</a>
+            </li>
             {/* <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
 							Careers
 						</li>
@@ -72,7 +76,7 @@ function Footer() {
               info@mdq.kz
             </li>
 
-            <li className="text-gray-800 pt-10 font-bold text-xl pb-4 hover:text-blue-600 cursor-pointer">
+            <li className="text-gray-800 pt-5 font-bold text-xl pb-4 hover:text-blue-600 cursor-pointer">
               Адрес
             </li>
             <a
@@ -84,8 +88,14 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col p-5 pl-16 bg-gray-50 text-xs">
+      <div className="md:flex md:flex-row md:justify-between flex-col px-40   bg-gray-50 text-xs">
         <h1 className="text-gray-500 font-semibold">© 2024 MDQ</h1>
+        {/* <Link href="/docs/2024_1_announcement_autorent.docx" className="text-black">dsadas</Link> */}
+        <Link href="/zakupki">
+          <h1 className="text-gray-800 font-bold text-xl pb-4 hover:text-blue-600 cursor-pointer">
+            Закупки
+          </h1>
+        </Link>
       </div>
     </>
   );
