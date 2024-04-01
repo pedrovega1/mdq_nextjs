@@ -42,8 +42,7 @@ export default function RootLayout({
         </div>
         <header>
           {" "}
-          {/* <Navbar /> */}
-          {/* <NavigationMenuDemo /> */}
+    
           <Navbar />
         </header>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

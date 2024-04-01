@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NextVideo from "next-video";
 import Video from "next-video";
+import { Asset } from "next-video/dist/assets.js";
 
 export const HeroParallax = ({
   products,
@@ -19,7 +20,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    videosrc: string;
+    videosrc: Asset;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -60,7 +61,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[200vh] md:h-[270vh] pt-40 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[260vh] md:h-[270vh] pt-40 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -124,7 +125,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    videosrc: string;
+    videosrc: Asset;
   };
   translate: MotionValue<number>;
 }) => {
