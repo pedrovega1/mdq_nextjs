@@ -8,10 +8,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigation = [
-  { name: "О нас", href: "/aboutus" },
+  { name: "Кто мы?", href: "/aboutus" },
   { name: "Гранты", href: "/granty" },
-  { name: "Аналитика", href: "/analytics" },
-  { name: "Конкурсы", href: "/konkursy" },
   { name: "FAQ", href: "/faq" },
   { name: "Контакты", href: "/contacts" },
 ];

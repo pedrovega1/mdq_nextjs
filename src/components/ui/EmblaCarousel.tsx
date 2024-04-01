@@ -11,7 +11,7 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-
+import './embla.css'
 const TWEEN_FACTOR_BASE = 0.84
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
