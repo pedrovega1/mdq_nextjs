@@ -301,7 +301,7 @@ const items = [
   {
     title: (
         <a className="text-sm bold" href="/granty/journalists">
-       я журналистов
+       Акселерация малых СМИ
         </a>
       ),
     description: (
@@ -317,7 +317,7 @@ const items = [
   {
     title: (
         <a className="text-sm bold" href="/granty/videographs">
-       я видеографов
+       Для контент-мейкеров
         </a>
       ),
     description: (
@@ -329,6 +329,22 @@ const items = [
     className: "md:col-span-3",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
+  {
+    title: (
+        <a className="text-sm bold" href="/granty/mediatrener">
+      Для медиатренеров
+        </a>
+      ),
+    description: (
+        <a className="text-sm bold" href="/granty/mediatrener">
+       Гранты на реализацию социально-значимых проектов до 10 млн тг.
+        </a>
+    ),
+    header: <SkeletonTwo />,
+    className: "md:col-span-3",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  
   // {
   //   title: "Условия и юридические документы",
   //   description: (
