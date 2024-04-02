@@ -53,6 +53,12 @@ export default function Zakup() {
       href: "/docs/2024_4_announcement_internet.docx",
       text: "Информационное сообщение о проведении закупок №4",
     },
+    {
+      id: 4,
+      href: "/docs/2024_5_announcement_water.docx",
+      text: "Информационное сообщение о проведении закупок №5",
+    },
+    
   ];
 
   const contracts2024 = [
