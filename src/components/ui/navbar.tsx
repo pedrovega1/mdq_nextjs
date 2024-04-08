@@ -20,7 +20,7 @@ function Navigationbar() {
       <div className="grow">
         <div className="hidden sm:flex items-center justify-center gap-2 md:gap-8">
           <Link href="/">О фонде</Link>
-          <Link href="/">Гранты</Link>
+          <Link href="/granty">Гранты</Link>
           <Link href="/">Образование</Link>
           <Link href="/">Аналитика</Link>
           <Link href="/">Новости</Link>
@@ -71,7 +71,7 @@ function Navigationbar() {
                     </Link>
                     <Link
                       className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/"
+                      href="/granty"
                     >
                       Гранты
                     </Link>
