@@ -1,107 +1,112 @@
 "use client";
-import Link from "next/link";
+import { useState } from "react";
+import { Fragment } from "react";
+import { usePathname } from "next/navigation";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import Image from "next/image";
-import { Fragment, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { ThemeProvider } from "next-themes";
-import { ThemeSwitcher } from "./ThemeSwitcher";
 
-function Navigationbar() {
-  const [navbar, setNavbar] = useState(false);
-  return (
-    <Popover
-      className={"container mx-auto flex items-center border-b2 px-6 py-3 h-24"}
-    >
-      <Link href="/">
-        <Image src="/logo.svg" width={70} height={70} alt="logo" />
-      </Link>
+const navigation = [
+  { name: "Кто мы?", href: "/aboutus" },
+  { name: "Гранты", href: "/granty" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Контакты", href: "/contacts" },
+];
 
-      <div className="grow">
-        <div className="hidden sm:flex items-center justify-center gap-2 md:gap-8">
-          <Link href="/">О фонде</Link>
-          <Link href="/granty">Гранты</Link>
-          <Link href="/">Образование</Link>
-          <Link href="/">Аналитика</Link>
-          <Link href="/">Новости</Link>
-        </div>
-        <div className="flex grow items-center justify-end sm:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-gray-500 focus:outline-none focus:ring-inset focus:ring-indigo-500">
-            <span className="sr-only">Menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </Popover.Button>
-          <Popover.Overlay className="sm:hidden fixed inset-0 bg-white opacity-30" />
-          <Transition
-            as={Fragment}
-            enter="duration-100 ease-out"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="duration-100 ease-in"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-o scale-95"
-          >
-            <Popover.Panel
-              focus
-              className="absolute inset-x-0 top-0 origin-top-right h-full transform p-2 transition md:hidden"
-            >
-              <div className="h-full rounded-lg bg-black ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
-                <div className="px-5 pt-5 pb-6">
-                  <div className="flex items-center justify-between">
-                    <Link href="/">
-                      <Image
-                        src="/logo.svg"
-                        width={70}
-                        height={70}
-                        alt="logo"
-                      />
-                    </Link>
-                    <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-gray-500 focus:outline-none focus:ring-inset focus:ring-indigo-500">
-                      <span className="sr-only">Close</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-8">
-                    <Link
-                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/"
-                    >
-                      О фонде
-                    </Link>
-                    <Link
-                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/granty"
-                    >
-                      Гранты
-                    </Link>
-                    <Link
-                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/"
-                    >
-                      Образование
-                    </Link>
-                    <Link
-                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/"
-                    >
-                      Аналитика
-                    </Link>
-                    <Link
-                      className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 px-2"
-                      href="/"
-                    >
-                      Новости
-                    </Link>
-                  </nav>
-                </div>
-              </div>
-            </Popover.Panel>
-          </Transition>
-        </div>
-      </div>
-    </Popover>
-  );
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
 }
 
-export default Navigationbar;
+export default function Navbar()  {
+  const pathname = usePathname();
+
+  return (
+    <Disclosure as="nav" className="bg-current shadow-sm">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 justify-between">
+              <div className="flex">
+                <div className="flex flex-shrink-0 items-center">
+                  <a href="/">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      className="text-gray-100"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="100%"
+                        height="100%"
+                        rx="16"
+                        fill="currentColor"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        pathname === item.href
+                          ? "border-slate-500 text-gray-900"
+                          : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
+                        "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                      )}
+                      aria-current={pathname === item.href ? "page" : undefined}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            
+              <div className="-mr-2 flex items-center sm:hidden">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 pt-2 pb-3">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    pathname === item.href
+                      ? "bg-slate-50 border-slate-500 text-slate-700"
+                      : "border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800",
+                    "block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                  )}
+                  aria-current={pathname === item.href ? "page" : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  );
+}
