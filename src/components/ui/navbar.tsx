@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -18,11 +18,34 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar()  {
+export default function Navbar() {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <Disclosure as="nav" className="bg-current shadow-sm">
+    <Disclosure
+      as="nav"
+      className={`bg-current shadow-sm ${
+        isScrolled
+          ? "fixed top-0 left-0 right-0 z-50 bg-opacity-100 "
+          : "bg-black/30 "
+      } transition-all duration-300 ease-in-out`}
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -60,8 +83,8 @@ export default function Navbar()  {
                       href={item.href}
                       className={classNames(
                         pathname === item.href
-                          ? "border-slate-500 text-gray-900"
-                          : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300",
+                          ? "border-slate-500 text-blue-600 "
+                          : "border-transparent text-slate-400 hover:text-gray-700 hover:border-gray-300 ",
                         "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                       )}
                       aria-current={pathname === item.href ? "page" : undefined}
@@ -71,7 +94,7 @@ export default function Navbar()  {
                   ))}
                 </div>
               </div>
-            
+
               <div className="-mr-2 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
                   <span className="sr-only">Open main menu</span>
@@ -85,6 +108,7 @@ export default function Navbar()  {
             </div>
           </div>
 
+          {/* Мобилка */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pt-2 pb-3">
               {navigation.map((item) => (
