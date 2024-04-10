@@ -26,6 +26,15 @@ function Footer() {
                 <FaYoutube className="text-2xl cursor-pointer text-blue-700" />
               </a>
             </div>
+            <div className="md:flex md:flex-row md:justify-between flex-col   text-xs">
+              <h1 className="text-gray-500 font-semibold">© 2024 MDQ</h1>
+              {/* <Link href="/docs/2024_1_announcement_autorent.docx" className="text-black">dsadas</Link> */}
+              <Link href="/zakupki">
+                <h1 className="text-gray-800 font-bold text-s pb-4 hover:text-blue-600 cursor-pointer">
+                  Закупки
+                </h1>
+              </Link>
+            </div>
           </ul>
         </div>
         <div className="p-5">
@@ -87,15 +96,6 @@ function Footer() {
             </a>
           </ul>
         </div>
-      </div>
-      <div className="md:flex md:flex-row md:justify-between flex-col px-40   bg-gray-50 text-xs">
-        <h1 className="text-gray-500 font-semibold">© 2024 MDQ</h1>
-        {/* <Link href="/docs/2024_1_announcement_autorent.docx" className="text-black">dsadas</Link> */}
-        <Link href="/zakupki">
-          <h1 className="text-gray-800 font-bold text-s pb-4 hover:text-blue-600 cursor-pointer">
-            Закупки
-          </h1>
-        </Link>
       </div>
     </>
   );

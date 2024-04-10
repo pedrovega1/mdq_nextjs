@@ -34,7 +34,7 @@ export default function RootLayout({
           }}
         >
           <Image
-            src="/bg.png"
+            src="/3245118.jpg"
             alt="Mountains with snow"
             layout="fill"
             objectFit="cover"
