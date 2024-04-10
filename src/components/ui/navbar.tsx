@@ -43,7 +43,7 @@ export default function Navbar() {
       className={`bg-current shadow-sm ${
         isScrolled
           ? "fixed top-0 left-0 right-0 z-50 bg-opacity-100 "
-          : "bg-black/30 "
+          : "p-2 "
       } transition-all duration-300 ease-in-out`}
     >
       {({ open }) => (
