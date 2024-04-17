@@ -84,7 +84,7 @@ export default function Navbar() {
                       className={classNames(
                         pathname === item.href
                           ? "border-slate-500 text-blue-600 "
-                          : "border-transparent text-slate-400 hover:text-gray-700 hover:border-gray-300 ",
+                          : "border-transparent text-slate-500 hover:text-gray-900 hover:border-gray-300 ",
                         "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                       )}
                       aria-current={pathname === item.href ? "page" : undefined}

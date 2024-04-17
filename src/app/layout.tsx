@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { NavigationMenuDemo } from "./navigation";
 import Footer from "@/components/ui/footer";
+import { Meteors } from "@/components/ui/meteors";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,12 +34,13 @@ export default function RootLayout({
             filter: "brightness(50%)",
           }}
         >
-          <Image
+          <Meteors/>
+          {/* <Image
             src="/3245118.jpg"
             alt="Mountains with snow"
             layout="fill"
             objectFit="cover"
-          />
+          /> */}
         </div>
         <header>
           {" "}

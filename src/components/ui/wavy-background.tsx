@@ -62,10 +62,15 @@ export const WavyBackground = ({
   };
 
   const waveColors = colors ?? [
+    //  голубой
     "#38bdf8",
+    // синий
     "#818cf8",
+    // фиол
     "#c084fc",
+    //  розовый
     "#e879f9",
+    // 
     "#22d3ee",
   ];
   const drawWave = (n: number) => {
