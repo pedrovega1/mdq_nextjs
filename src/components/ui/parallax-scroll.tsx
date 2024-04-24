@@ -78,6 +78,7 @@ export const ParallaxScroll = ({
               />
             </motion.div>
           ))}
+          <div></div>
         </div>
       </div>
     </div>
