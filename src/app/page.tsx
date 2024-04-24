@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { HeroParallaxDemo } from "./GlowingStarsBackgroundCardPreview";
 
 export default function Home() {
@@ -9,4 +7,3 @@ export default function Home() {
     </main>
   );
 }
->>>>>>> newbranchpedro
