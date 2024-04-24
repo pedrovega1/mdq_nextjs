@@ -5,7 +5,7 @@ import { ThemeProvider } from "./theme-provider";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 
 import { NavigationMenuDemo } from "./navigation";
-import Navigationbar from "@/components/ui/navbar";
+import Navbar from "@/components/ui/navbar";
 import { FooterLinks } from "@/components/Footer/FooterLinks";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "@/theme";
@@ -35,7 +35,7 @@ export default function RootLayout({
           {/* <Navbar /> */}
           {/* <NavigationMenuDemo /> */}
           {/* <NavBar /> */}
-          <Navigationbar />
+         <Navbar/>
         </header>
         <MantineProvider theme={theme}>{children}</MantineProvider>
         <FooterLinks />
