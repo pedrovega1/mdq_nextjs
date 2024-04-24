@@ -5,7 +5,7 @@ import { ThemeProvider } from "./theme-provider";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 
 import { NavigationMenuDemo } from "./navigation";
-import Navbar from "@/components/ui/navbar";
+import Navbar from "@/components/ui/Navbar";
 import { FooterLinks } from "@/components/Footer/FooterLinks";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "@/theme";
