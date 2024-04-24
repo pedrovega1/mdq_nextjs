@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import * as React from "react";
@@ -133,4 +131,3 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
->>>>>>> newbranchpedro
