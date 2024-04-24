@@ -6,7 +6,6 @@ import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 import Navbar from "@/components/ui/navbar";
 import Image from "next/image";
 
-import { NavigationMenuDemo } from "./navigation";
 import Footer from "@/components/ui/footer";
 import { Meteors } from "@/components/ui/meteors";
 
@@ -34,7 +33,7 @@ export default function RootLayout({
             filter: "brightness(50%)",
           }}
         >
-          <Meteors/>
+          {/* <Meteors/> */}
           {/* <Image
             src="/3245118.jpg"
             alt="Mountains with snow"
@@ -44,7 +43,6 @@ export default function RootLayout({
         </div>
         <header>
           {" "}
-    
           <Navbar />
         </header>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
