@@ -69,12 +69,9 @@ export default function Home() {
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <CardTitle className=" m-20"> </CardTitle>
         <CardTitle className=" m-5">Видео-инструкция</CardTitle>
-        <div className="container">
-          <iframe
-            className="responsive-iframe p-4 "
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          ></iframe>
-        </div>
+        <video controls className="responsive-video p-4">
+          <source src="/video-grants/authorkk.webm" type="video/webm" />
+        </video>
         <CardTitle className="m-5 mt-20">FAQ</CardTitle>
         <CustomAccordion items={[]}/>
         <div className="p-4 flex items-center">
