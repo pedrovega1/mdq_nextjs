@@ -15,8 +15,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Accordionjournal } from "@/components/accordion_journalist";
+
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import CustomAccordion from "@/components/accordion_journalist";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
@@ -75,7 +76,7 @@ export default function Home() {
           ></iframe>
         </div>
         <CardTitle className="m-5 mt-20">FAQ</CardTitle>
-        <Accordionjournal />
+        <CustomAccordion items={[]}/>
         <div className="p-4 flex items-center">
           <div className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
