@@ -6,12 +6,14 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
+import DropdownMenu from "../ButtonSwitch";
+import ButtonSwitch from "../ButtonSwitch";
 
 const navigation = [
   { name: "Кто мы?", href: "/ru/aboutus" },
-  { name: "Гранты", href: "/granty" },
-  { name: "FAQ", href: "/faq" },
-  { name: "Контакты", href: "/contacts" },
+  { name: "Гранты", href: "/ru/granty" },
+  { name: "FAQ", href: "/ru/faq" },
+  { name: "Контакты", href: "/ru/contacts" },
 ];
 
 function classNames(...classes: string[]) {
@@ -40,15 +42,13 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`bg-current shadow-sm ${
-        isScrolled
-          ? "fixed top-0 left-0 right-0 z-50 bg-opacity-100 "
-          : "p-2 "
+      className={`bg-current shadow-sm bg-slate-100 rounded ${
+        isScrolled ? "fixed top-0 left-0 right-0 z-50 bg-opacity-100 " : "p-1 "
       } transition-all duration-300 ease-in-out`}
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
@@ -76,7 +76,7 @@ export default function Navbar() {
                     </svg>
                   </a>
                 </div>
-                <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8 sm:justify-center sm:items-center ">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -92,6 +92,7 @@ export default function Navbar() {
                       {item.name}
                     </a>
                   ))}
+                  <ButtonSwitch />
                 </div>
               </div>
 

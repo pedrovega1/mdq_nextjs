@@ -199,7 +199,10 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Отличный грант!
         </p>
-        <a href="https://www.youtube.com/" className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <a
+          href="https://www.youtube.com/"
+          className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
           Youtube
         </a>
       </motion.div>
@@ -214,7 +217,10 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Смотрите мой ролик про героин!
         </p>
-        <a href="https://www.youtube.com/" className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <a
+          href="https://www.youtube.com/"
+          className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
           Youtube
         </a>
       </motion.div>
@@ -232,7 +238,10 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Пробился в Голивуд! Смотрите мои ролики и статьи!!!!
         </p>
-        <a href="https://www.youtube.com/" className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <a
+          href="https://www.youtube.com/"
+          className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
           Ссылка
         </a>
       </motion.div>
@@ -300,56 +309,55 @@ const SkeletonFour = () => {
 const items = [
   {
     title: (
-        <a className="text-sm bold" href="/granty/journalists">
-       Акселерация малых СМИ
-        </a>
-      ),
+      <a className="text-sm bold" href="/ru/granty/mediatrener">
+        Для медиатренеров
+      </a>
+    ),
     description: (
-        <a className="text-sm bold" href="/granty/journalists">
-           Гранты на образование объективной журналистике до 5 млн тг.
-        </a>
-      ),
+      <a className="text-sm bold" href="/ru/granty/mediatrener">
+        Гранты на реализацию социально-значимых проектов до 10 млн тг.
+      </a>
+    ),
+    header: <SkeletonTwo />,
+    className: "md:col-span-3",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: (
+      <a className="text-sm bold" href="/ru/granty/journalists">
+        Акселерация малых СМИ
+      </a>
+    ),
+    description: (
+      <a className="text-sm bold" href="/ru/granty/journalists">
+        Гранты на образование объективной журналистике до 5 млн тг.
+      </a>
+    ),
     header: <SkeletonOne />,
     className: "md:col-span-3",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />
-   
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: (
-        <a className="text-sm bold" href="/granty/videographs">
-       Для контент-мейкеров
-        </a>
-      ),
+      <a className="text-sm bold" href="/ru/granty/videographs">
+        Для контент-мейкеров
+      </a>
+    ),
     description: (
-        <a className="text-sm bold" href="/granty/videographs">
-       Гранты на реализацию социально-значимых проектов до 10 млн тг.
-        </a>
+      <a className="text-sm bold" href="/ru/granty/videographs">
+        Гранты на реализацию социально-значимых проектов до 10 млн тг.
+      </a>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-3",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
-  {
-    title: (
-        <a className="text-sm bold" href="/granty/mediatrener">
-      Для медиатренеров
-        </a>
-      ),
-    description: (
-        <a className="text-sm bold" href="/granty/mediatrener">
-       Гранты на реализацию социально-значимых проектов до 10 млн тг.
-        </a>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-3",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  
+
   // {
   //   title: "Условия и юридические документы",
   //   description: (
   //     <span className="text-sm">
-        
+
   //     </span>
   //   ),
   //   header: <SkeletonThree />,
@@ -368,15 +376,15 @@ const items = [
   //   icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   // },
 
-//   {
-//     title: "Text Summarization",
-//     description: (
-//       <span className="text-sm">
-//         Summarize your lengthy documents with AI technology.
-//       </span>
-//     ),
-//     header: <SkeletonFive />,
-//     className: "md:col-span-1",
-//     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-//   },
+  //   {
+  //     title: "Text Summarization",
+  //     description: (
+  //       <span className="text-sm">
+  //         Summarize your lengthy documents with AI technology.
+  //       </span>
+  //     ),
+  //     header: <SkeletonFive />,
+  //     className: "md:col-span-1",
+  //     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  //   },
 ];
