@@ -29,7 +29,7 @@ function Footer() {
             <div className="md:flex md:flex-row md:justify-between flex-col   text-xs">
               <h1 className="text-gray-500 font-semibold">© 2024 MDQ</h1>
               {/* <Link href="/docs/2024_1_announcement_autorent.docx" className="text-black">dsadas</Link> */}
-              <Link href="/zakupki">
+              <Link href="/ru/zakupki">
                 <h1 className="text-gray-800 font-bold text-s pb-4 hover:text-blue-600 cursor-pointer">
                   Закупки
                 </h1>
