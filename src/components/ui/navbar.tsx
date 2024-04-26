@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`bg-current shadow-sm bg-gradient-to-b from-slate-100 via-slate-200 to-slate-300 rounded ${
+      className={`bg-current shadow-sm bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 rounded ${
         isScrolled ? "fixed top-0 left-0 right-0 z-50 bg-opacity-100 " : "p-1 "
       } transition-all duration-300 ease-in-out`}
     >
