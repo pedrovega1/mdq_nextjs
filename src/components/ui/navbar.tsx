@@ -53,7 +53,7 @@ export default function Navbar() {
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
                   <a href="/">
-                    <Image src="/logo_color.svg" width = "80" height = "100"></Image>
+                    <Image src="/logo_color.svg" width = "80" height = "100" alt = "logo"></Image>
                   </a>
                 </div>
                 <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8 sm:justify-center sm:items-center ">
