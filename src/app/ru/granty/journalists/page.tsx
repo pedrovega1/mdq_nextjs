@@ -19,8 +19,8 @@ import CustomAccordion from "@/components/accordion_journalist";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDE_COUNT = 8;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys(), i => `SMI_ru${i}`);;
 const faqItems = [
   {
     question: "Кто может стать участником грантовой программы?",
@@ -138,7 +138,7 @@ export default function Home() {
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
           <CardTitle className="mb-5">
-            ШАҒЫН МЕДИА АКСЕЛЕРАЦИЯСЫНА АРНАЛҒАН ГРАНТТАР
+          ГРАНТЫ ДЛЯ АКСЕЛЕРАЦИИ МАЛЫХ СМИ
           </CardTitle>
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh

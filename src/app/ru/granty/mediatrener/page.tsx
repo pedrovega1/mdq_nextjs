@@ -19,8 +19,10 @@ import CustomAccordion from "@/components/accordion_journalist";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDE_COUNT = 7;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys(), i => `Media_ru${i}`);;
+console.log(SLIDES);
+
 
 
 const faqItems = [

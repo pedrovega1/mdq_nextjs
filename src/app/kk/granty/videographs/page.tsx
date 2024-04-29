@@ -20,8 +20,8 @@ import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 import CustomAccordion from "@/components/accordion_journalist";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDE_COUNT = 8;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys(), i => `content_kz${i}`);;
 const faqItems = [
   {
     question: "Кім грант иегері бола алады?",

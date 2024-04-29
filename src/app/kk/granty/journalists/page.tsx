@@ -20,15 +20,16 @@ import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 import CustomAccordion from "@/components/accordion_journalist";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDE_COUNT = 8;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys(), i => `SMI_kz${i}`);;
 
 export default function Home() {
   return (
     <main className="">
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
-          <CardTitle className="mb-5">Гранты для журналистов</CardTitle>
+          <CardTitle className="mb-5">ШАҒЫН МЕДИА АКСЕЛЕРАЦИЯСЫНА АРНАЛҒАН ГРАНТТАР
+</CardTitle>
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh
             ante, rhoncus ut ullamcorper et, faucibus porta massa. Suspendisse
