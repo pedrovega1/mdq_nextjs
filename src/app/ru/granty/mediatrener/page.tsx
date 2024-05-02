@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card";
 import CustomAccordion from "@/components/accordion_journalist";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 7;
@@ -134,36 +135,27 @@ export default function Home() {
             Гранты для обучения журналистов и блогеров в регионах
           </CardTitle>
           <CardDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh
-            ante, rhoncus ut ullamcorper et, faucibus porta massa. Suspendisse
-            augue sapien, luctus id dolor et, ornare lacinia leo. Phasellus
-            placerat nisi sit amet sem ultrices auctor. Nulla sit amet molestie
-            nisi. Aliquam vitae venenatis turpis. Morbi laoreet mi non dui
-            consectetur, vel ullamcorper augue cursus. Phasellus lacus magna,
-            eleifend eu lacus in, dictum finibus metus. Maecenas sed tortor
-            arcu. Donec nisl urna, pulvinar quis felis in, aliquam volutpat
-            nisi. Pellentesque dui erat, fringilla in condimentum et, hendrerit
-            vel risus. Suspendisse vehicula vel sapien aliquam dictum. Sed
-            ultrices, eros ac porta lacinia, mi justo pharetra purus, ut
-            convallis purus purus et erat. Mauris pretium mi id erat commodo
-            malesuada. Suspendisse in tortor quis quam fermentum tempus sit amet
-            convallis arcu. Suspendisse orci leo, scelerisque at luctus sed,
-            imperdiet id augue. Praesent lobortis fermentum nibh. Nam eu
-            fermentum orci. Vivamus dictum dapibus augue sit amet mattis. In
-            ullamcorper lacus id mi pellentesque sollicitudin. Vestibulum
-            vehicula quis odio non interdum. Vestibulum dolor felis, lobortis
-            eget sapien nec, placerat congue libero. Pellentesque non felis quis
-            augue suscipit gravida a sagittis dui. Phasellus in justo a lacus
-            fermentum tempor quis ac orci.
+          Менторство для Вас! 
+Если Вы профессиональный журналист Казахстана с опытом работы в масс-медиа не менее 5 лет и мечтаете раскрыть потенциал молодых перспективных журналистов и блогеров, то грантовая программа Фонда для Вас! Вы сможете передать свой опыт, знания и ценные советы молодым специалистам из регионов, показать, как стать настоящим профессионалом и научить делать качественный контент! Не упустите возможность внести новаторство в области аналитической журналистики, профессиональной медиа этики и критического анализа при подаче информации. Пора внести значительный вклад в развитие казахстанской медиасферы!  
+ 
+Сроки предоставления заявок: с 15 мая по 30 июня 2024 года
           </CardDescription>
         </CardHeader>
         <div className="p-4">
           <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <a href="https://forms.gle/oSaQPLx1vEFBd2vD6">Податься</a>
+              <a href="https://forms.gle/oSaQPLx1vEFBd2vD6">Подать заявку</a>
             </span>
+            
           </button>
+          <div className=" inline-flex px-1"></div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            <Link href="/docs/granty/obyavlenie_ru.docx">Полная информация</Link>
+            </span>
+</button>
         </div>
         <CardContent>
           {/* <Image src="/1.png" width="500" height="500" className=''/> */}
@@ -178,16 +170,23 @@ export default function Home() {
           <source src="/video-grants/tutorialrumedia.webm" type="video/webm" />
         </video>
 
-        <CardTitle className="m-5 mt-20">FAQ</CardTitle>
+        <CardTitle className="m-5 mt-20">Вопросы-ответы</CardTitle>
         <CustomAccordion items={faqItems} />
         <div className="p-4 flex items-center">
           <div className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <a href="https://forms.gle/oSaQPLx1vEFBd2vD6">Податься</a>
+              <a href="https://forms.gle/oSaQPLx1vEFBd2vD6">Подать заявку</a>
             </span>
           </div>
 
+          <div className=" inline-flex px-1"></div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            <Link href="/docs/granty/obyavlenie_ru.docx">Полная информация</Link>
+            </span>
+</button>
           <div className="p-2 flex gap-2 items-center">
             <div className="flex items-center justify-center bg-slate-950 p-3 rounded-full ">
               <WhatsappShareButton url="https://www.youtube.com/watch?v=9WzIACv_mxs">

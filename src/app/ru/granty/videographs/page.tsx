@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card";
 import CustomAccordion from "@/components/accordion_journalist";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 8;
@@ -227,37 +228,27 @@ export default function Home() {
             Гранты для авторов контента в социальных сетях
           </CardTitle>
           <CardDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh
-            ante, rhoncus ut ullamcorper et, faucibus porta massa. Suspendisse
-            augue sapien, luctus id dolor et, ornare lacinia leo. Phasellus
-            placerat nisi sit amet sem ultrices auctor. Nulla sit amet molestie
-            nisi. Aliquam vitae venenatis turpis. Morbi laoreet mi non dui
-            consectetur, vel ullamcorper augue cursus. Phasellus lacus magna,
-            eleifend eu lacus in, dictum finibus metus. Maecenas sed tortor
-            arcu. Donec nisl urna, pulvinar quis felis in, aliquam volutpat
-            nisi. Pellentesque dui erat, fringilla in condimentum et, hendrerit
-            vel risus. Suspendisse vehicula vel sapien aliquam dictum. Sed
-            ultrices, eros ac porta lacinia, mi justo pharetra purus, ut
-            convallis purus purus et erat. Mauris pretium mi id erat commodo
-            malesuada. Suspendisse in tortor quis quam fermentum tempus sit amet
-            convallis arcu. Suspendisse orci leo, scelerisque at luctus sed,
-            imperdiet id augue. Praesent lobortis fermentum nibh. Nam eu
-            fermentum orci. Vivamus dictum dapibus augue sit amet mattis. In
-            ullamcorper lacus id mi pellentesque sollicitudin. Vestibulum
-            vehicula quis odio non interdum. Vestibulum dolor felis, lobortis
-            eget sapien nec, placerat congue libero. Pellentesque non felis quis
-            augue suscipit gravida a sagittis dui. Phasellus in justo a lacus
-            fermentum tempor quis ac orci.
+          Впервые в Казахстане гранты для авторов социальных сетей! 
+Основатели казахстанских аккаунтов и каналов могут стать обладателями гранта от Фонда. Это уникальная возможность повысить свой профессионализм, креативность и целевую аудиторию! Что нужно для участия в программе? Претендующий на получение гранта должен разработать и отправить на конкурс социально значимый, актуальный оригинальный и перспективный проект, а также прикрепить анкету. Прошедший двухэтапный конкурс становится обладателем фондового гранта в размере от трех до десяти миллионов тенге!  
+Участвуй, выигрывай, развивай общественно значимый контент! Воплощай в жизнь творческие идеи!
           </CardDescription>
         </CardHeader>
         <div className="p-4">
           <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <a href="https://forms.gle/H8J5xknVAyL9YKTM6">Податься</a>
+              <a href="https://forms.gle/H8J5xknVAyL9YKTM6">Подать заявку</a>
             </span>
           </button>
+          <div className=" inline-flex px-1"></div>
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            <Link href="/docs/granty/obyavlenie_ru.docx">Полная информация</Link>
+            </span>
+</button>
         </div>
+        
         <CardContent>
           {/* <Image src="/1.png" width="500" height="500" className=''/> */}
         </CardContent>
@@ -269,13 +260,13 @@ export default function Home() {
         <video controls className="responsive-video p-4">
           <source src="/video-grants/authorru.webm" type="video/webm" />
         </video>
-        <CardTitle className="m-5 mt-20">FAQ</CardTitle>
+        <CardTitle className="m-5 mt-20">Вопросы-ответы</CardTitle>
         <CustomAccordion items={faqItems} />
         <div className="p-4 flex items-center">
           <div className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <a href="https://forms.gle/H8J5xknVAyL9YKTM6">Податься</a>
+              <a href="https://forms.gle/H8J5xknVAyL9YKTM6">Подать заявку</a>
             </span>
           </div>
 
