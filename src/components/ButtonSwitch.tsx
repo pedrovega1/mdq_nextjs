@@ -27,7 +27,7 @@ function ButtonSwitch() {
       <div className="flex flex-row items-center right-1">
         <button
           onClick={() => changeLanguage('kk')}
-          className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
+          className="p-2 flex flex-row items-center  text-sm font-medium text-gray-500 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
         >
           <span className="text-md">KK</span>
           <span className="ml-1">
@@ -40,7 +40,7 @@ function ButtonSwitch() {
 
         <button
           onClick={() => changeLanguage('ru')}
-          className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
+          className="p-2 flex flex-row items-center text-sm font-medium text-gray-500 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
         >
           <span className="text-md">RU</span>
           <span className="ml-1">
