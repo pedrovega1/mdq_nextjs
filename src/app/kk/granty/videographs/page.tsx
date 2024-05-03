@@ -212,7 +212,7 @@ export default function Home() {
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
           <CardTitle className="mb-5">
-            ӘЛЕУМЕТТІК ЖЕЛІДЕ МЕДИА КОНТЕНТ АВТОРЛАРЫНА АРНАЛҒАН ГРАНТ
+          Әлеуметтік желілердегі медиа контент авторларына арналған гранттар
           </CardTitle>
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh

@@ -225,7 +225,7 @@ export default function Home() {
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
           <CardTitle className="mb-5">
-            Гранты для авторов контента в социальных сетях
+          Гранты для авторов контента в социальных сетях
           </CardTitle>
           <CardDescription>
           Впервые в Казахстане гранты для авторов социальных сетей! 

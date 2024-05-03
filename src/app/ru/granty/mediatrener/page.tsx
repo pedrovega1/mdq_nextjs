@@ -132,7 +132,7 @@ export default function Home() {
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
           <CardTitle className="mb-5">
-            Гранты для обучения журналистов и блогеров в регионах
+          Гранты для медиатренеров
           </CardTitle>
           <CardDescription>
           Менторство для Вас! 

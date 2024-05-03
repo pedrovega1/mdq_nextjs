@@ -139,7 +139,7 @@ export default function Home() {
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
           <CardTitle className="mb-5">
-          ГРАНТЫ ДЛЯ АКСЕЛЕРАЦИИ МАЛЫХ СМИ
+          Гранты для акселерации малых СМИ
           </CardTitle>
           <CardDescription>
           Первая в Казахстане грантовая программа на акселерацию малых СМИ! 

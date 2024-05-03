@@ -28,7 +28,7 @@ export default function Home() {
     <main className="">
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
-          <CardTitle className="mb-5">ШАҒЫН МЕДИА АКСЕЛЕРАЦИЯСЫНА АРНАЛҒАН ГРАНТТАР
+          <CardTitle className="mb-5">Шағын медиа акселерациясына арналған гранттар 
 </CardTitle>
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh

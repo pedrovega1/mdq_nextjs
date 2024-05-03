@@ -200,7 +200,7 @@ export default function Home() {
     <main className="">
       <Card className="place-self-center lg:ml-96 max-w-6xl m-5 my-8 ">
         <CardHeader>
-          <CardTitle className="mb-5">ҚР ОБЛЫСТАРЫНДАҒЫ ЖУРНАЛИСТЕР МЕН БЛОГЕРЛЕРДІ ОҚЫТУҒА АРНАЛҒАН МЕДИА ТРЕНЕРЛЕРГЕ БЕРІЛЕТІН ГРАНТТАР</CardTitle>
+          <CardTitle className="mb-5">Медиа тренерлерге арналған гранттар </CardTitle>
           <CardDescription>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh
             ante, rhoncus ut ullamcorper et, faucibus porta massa. Suspendisse

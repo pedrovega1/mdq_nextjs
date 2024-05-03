@@ -3,7 +3,7 @@
 import React from 'react'
 
 
-import { BentoGridThirdDemo } from "@/components/demobento";
+import { BentoGridThirdDemo } from "@/components/demobentokz";
 import EmblaCarousel from '@/components/ui/EmblaCarousel'
 import { EmblaOptionsType } from 'embla-carousel'
 import '@/css/embla.css'
