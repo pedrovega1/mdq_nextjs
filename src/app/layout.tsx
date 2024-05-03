@@ -30,7 +30,7 @@ export default function RootLayout({
             position: "fixed",
             width: "100vw",
             height: "100vh",
-            filter: "brightness(50%)",
+            filter: "brightness(100%)",
           }}
         >
           {/* <Meteors/> */}

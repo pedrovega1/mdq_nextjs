@@ -24,7 +24,7 @@ body {
   line-height: 1.65;
 }
 .theme-light {
-  --brand-primary: rgb(47, 112, 193);
+  --brand-primary: rgb(40, 46, 54);
   --brand-secondary: rgb(116, 97, 195);
   --brand-alternative: rgb(19, 120, 134);
   --background-site: rgb(249, 249, 249);

@@ -71,6 +71,6 @@
     /* @apply border-border; */
   }
   body {
-    background: linear-gradient(#1eb5d3, #16a0db);
+    background: linear-gradient(90deg, rgba(4,4,66,1) 2%, rgba(7,4,47,1) 100%, rgba(0,212,255,1) 100%);
 }
 }
